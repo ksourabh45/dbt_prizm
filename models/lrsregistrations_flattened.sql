@@ -39,4 +39,4 @@ SELECT (_airbyte_raw_lrsregistrations._airbyte_data -> '_id'::text) ->> 'tenantI
     _airbyte_raw_lrsregistrations._airbyte_data ->> 'scormProfileAttemptIri'::text AS scormprofileattemptiri,
     _airbyte_raw_lrsregistrations._airbyte_data ->> 'lastCompletionStatement'::text AS lastcompletionstatement,
     _airbyte_raw_lrsregistrations._airbyte_data ->> 'lastSubmissionStatement'::text AS lastsubmissionstatement
-   FROM c3po_progress._airbyte_raw_lrsregistrations;
+   FROM c3po_progress._airbyte_raw_lrsregistrations
