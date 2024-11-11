@@ -18,4 +18,4 @@ SELECT _airbyte_raw_attempts._airbyte_data ->> '_id'::text AS _id,
     ((_airbyte_raw_attempts._airbyte_data -> 'score'::text) ->> 'min'::text)::double precision AS score_min,
     ((_airbyte_raw_attempts._airbyte_data -> 'score'::text) ->> 'raw'::text)::double precision AS score_raw,
     ((_airbyte_raw_attempts._airbyte_data -> 'score'::text) ->> 'scaled'::text)::double precision AS score_scaled
-   FROM c3po_progress._airbyte_raw_attempts;
+   FROM c3po_progress._airbyte_raw_attempts
