@@ -48,4 +48,4 @@ SELECT a._class AS actor_class,
      LEFT JOIN c3po_progress.lrsstatements_object_definition od ON ls._airbyte_ab_id::text = od._airbyte_ab_id::text
      LEFT JOIN c3po_progress.lrsstatements_object_definition_name odn ON ls._airbyte_ab_id::text = odn._airbyte_ab_id::text
      LEFT JOIN c3po_progress.lrsstatements_object_definition_description odd ON ls._airbyte_ab_id::text = odd._airbyte_ab_id::text
-  WHERE ls._airbyte_ab_id IS NOT NULL;
+  WHERE ls._airbyte_ab_id IS NOT NULL
