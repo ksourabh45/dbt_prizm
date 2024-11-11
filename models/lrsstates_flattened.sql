@@ -10,4 +10,4 @@ SELECT (_airbyte_raw_lrsstates._airbyte_data -> '_id'::text) ->> 'tenantId'::tex
     _airbyte_raw_lrsstates._airbyte_data ->> 'location'::text AS location,
     _airbyte_raw_lrsstates._airbyte_data ->> 'createdAt'::text AS createdat,
     _airbyte_raw_lrsstates._airbyte_data ->> 'version'::text AS version
-   FROM c3po_progress._airbyte_raw_lrsstates;
+   FROM c3po_progress._airbyte_raw_lrsstates
