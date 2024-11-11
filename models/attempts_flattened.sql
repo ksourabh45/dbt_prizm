@@ -1,0 +1,21 @@
+-- c3po_progress.flattened_attempts source
+SELECT _airbyte_raw_attempts._airbyte_data ->> '_id'::text AS _id,
+    _airbyte_raw_attempts._airbyte_data ->> '_class'::text AS _class,
+    (_airbyte_raw_attempts._airbyte_data ->> 'ordinal'::text)::integer AS ordinal,
+    _airbyte_raw_attempts._airbyte_data ->> 'location'::text AS location,
+    _airbyte_raw_attempts._airbyte_data ->> 'createdAt'::text AS createdat,
+    _airbyte_raw_attempts._airbyte_data ->> 'lrsTenant'::text AS lrstenant,
+    _airbyte_raw_attempts._airbyte_data ->> 'summaryId'::text AS summaryid,
+    _airbyte_raw_attempts._airbyte_data ->> 'updatedAt'::text AS updatedat,
+    _airbyte_raw_attempts._airbyte_data ->> 'completedAt'::text AS completedat,
+    _airbyte_raw_attempts._airbyte_data ->> 'submittedAt'::text AS submittedat,
+    _airbyte_raw_attempts._airbyte_data ->> 'lmsReferenceId'::text AS lmsreferenceid,
+    (_airbyte_raw_attempts._airbyte_data ->> 'durationInSeconds'::text)::integer AS durationinseconds,
+    _airbyte_raw_attempts._airbyte_data ->> 'callbackListenerId'::text AS callbacklistenerid,
+    _airbyte_raw_attempts._airbyte_data ->> 'scormProfileAttemptIri'::text AS scormprofileattemptiri,
+    (_airbyte_raw_attempts._airbyte_data ->> 'explicitSubmissionRequired'::text)::boolean AS explicitsubmissionrequired,
+    ((_airbyte_raw_attempts._airbyte_data -> 'score'::text) ->> 'max'::text)::double precision AS score_max,
+    ((_airbyte_raw_attempts._airbyte_data -> 'score'::text) ->> 'min'::text)::double precision AS score_min,
+    ((_airbyte_raw_attempts._airbyte_data -> 'score'::text) ->> 'raw'::text)::double precision AS score_raw,
+    ((_airbyte_raw_attempts._airbyte_data -> 'score'::text) ->> 'scaled'::text)::double precision AS score_scaled
+   FROM c3po_progress._airbyte_raw_attempts;
