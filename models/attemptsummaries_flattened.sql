@@ -10,4 +10,4 @@ SELECT _airbyte_raw_attemptsummaries._airbyte_data ->> '_id'::text AS _id,
     _airbyte_raw_attemptsummaries._airbyte_data ->> 'nextOrdinal'::text AS nextordinal,
     _airbyte_raw_attemptsummaries._airbyte_data ->> 'resourceType'::text AS resourcetype,
     _airbyte_raw_attemptsummaries._airbyte_data ->> 'submittedAttempts_aibyte_transform'::text AS submittedattempts_aibyte_transform
-   FROM c3po_progress._airbyte_raw_attemptsummaries;
+   FROM c3po_progress._airbyte_raw_attemptsummaries
