@@ -46,4 +46,4 @@ SELECT
     -- Timestamp
     "_airbyte_data"->'timestamp'->>'instant' AS timestamp_instant,
     "_airbyte_data"->'timestamp'->>'offset' AS timestamp_offset
-FROM c3po_progress._airbyte_raw_lrsstatements;
+FROM c3po_progress._airbyte_raw_lrsstatements
